@@ -29,11 +29,26 @@ datacenters where the user only has control over the cloudlets
 class Simulation3
 
 object Simulation3:
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+  val config = ObtainConfigReference("cloudSimulator") match {
+    case Some(value) => value
+    case None => throw new RuntimeException("Cannot obtain a reference to the config data.")
+  }
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
   val logger = CreateLogger(classOf[BasicCloudSimPlusExample])
 
   val random: ContinuousDistribution = new UniformDistr();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
   val config: Config = ConfigFactory.load("provider.conf").getConfig("Cloud")
 
   val saasconfig:Config = config.getConfig("Saas")
@@ -42,6 +57,16 @@ object Simulation3:
 
 
 
+<<<<<<< HEAD
+=======
+=======
+  def start() = {
+
+    val config: Config = ConfigFactory.load("provider.conf").getConfig("Cloud")
+
+    val saasconfig:Config = config.getConfig("Saas")
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
 
     val vmAllocation = Map("FirstFit"->new VmAllocationPolicyFirstFit(),"RoundRobin"->new VmAllocationPolicyRoundRobin(),"Simple"->new VmAllocationPolicySimple(),"BestFit"->new VmAllocationPolicyBestFit());
 
@@ -88,7 +113,15 @@ object Simulation3:
             .setRam(config.getLong("vm.RAMInMBs"))
             .setBw(config.getLong("vm.BandwidthInMBps"))
             .setSize(config.getLong("vm.Size"))
+<<<<<<< HEAD
             .setCloudletScheduler(cloudletScheduling(saasconfig.getString("cloudlet.CloudletScheduling"))))
+=======
+<<<<<<< HEAD
+            .setCloudletScheduler(cloudletScheduling(saasconfig.getString("cloudlet.CloudletScheduling"))))
+=======
+            .setCloudletScheduler(new cloudlet.CloudletSchedulerSpaceShared()))
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
         )
 
       return vmList

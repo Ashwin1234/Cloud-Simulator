@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Homework 1 - Ashwin Bhaskar Srivatsa
+=======
+# Homework 1
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
 ## Description
 As part of this homework we are required to create different cloud simulations on different datacenters which are mixes of Iaas, Paas and Saas model implementation.
 
@@ -6,12 +10,20 @@ As part of this homework we are required to create different cloud simulations o
 To start with this assignment contains implementation of various services and policies in cloud datacenters using the [Cloudsim plus](https://cloudsimplus.org/) framework. There are different simulations that are executed using different configurations with pricing being calculated. The simulations also show the effect of different configuarations on VM and cloudlet allocations by the brokers.
 
 ## Instructions to run
+<<<<<<< HEAD
 Using intellij
+=======
+###Using intellij
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
 Install Intellij, sbt <br/>
 clone the repo - ```https://github.com/Ashwin1234/CloudOrgSimulator``` and navigate to the folder. <br/>
 click on the Simulation.scala file in src and click run. <br/>
 choose the simulation by entering 1,2 or 3, you will get the output of that particular simulation. <br/>
+<<<<<<< HEAD
 Using sbt
+=======
+###Using sbt
+>>>>>>> 5bd8f8d976cca9ed0de7c61c51a58f20f25e474a
 Navigate to project folder and type in the following commend ```sbt clean compile run``` <br/>
 choose the simulation by entering 1,2 or 3, you will get the output of that particular simulation. <br/>
 To run the test ```sbt test```
