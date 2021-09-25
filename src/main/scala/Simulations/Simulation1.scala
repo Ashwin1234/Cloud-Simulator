@@ -140,7 +140,11 @@ object Simulation1:
         vmList(i-1).addOnUpdateProcessingListener(vmDestruction)
       )
 
+<<<<<<< HEAD
     val utilizationModel = new UtilizationModelDynamic(iaasconfig.getDouble("utilizationRatio"));
+=======
+    val utilizationModel = new UtilizationModelDynamic(config.getDouble("utilizationRatio"));
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
 
     /* Method to create cloudlets*/
     def createCloudlets(): ListBuffer[Cloudlet] = {

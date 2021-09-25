@@ -2,7 +2,11 @@ package Simulations
 
 import HelperUtils.{CreateLogger, CustomCloudletsTable, ObtainConfigReference}
 import Simulations.BasicCloudSimPlusExample.{config, logger}
+<<<<<<< HEAD
 
+=======
+import Simulations.Simulation1.iaasconfig
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
 import com.typesafe.config.{Config, ConfigFactory}
 import org.cloudbus.cloudsim.allocationpolicies.{VmAllocationPolicyBestFit, VmAllocationPolicyFirstFit, VmAllocationPolicyRoundRobin, VmAllocationPolicySimple}
 import org.cloudbus.cloudsim.brokers.DatacenterBrokerSimple
@@ -37,13 +41,21 @@ object Simulation2:
   val logger = CreateLogger(classOf[BasicCloudSimPlusExample])
 
   val random: ContinuousDistribution = new UniformDistr();
+<<<<<<< HEAD
   val config: Config = ConfigFactory.load("provider.conf").getConfig("Cloud")
   val paasconfig: Config = config.getConfig("Paas")
+=======
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
 
   def start() = {
 
 
+<<<<<<< HEAD
 
+=======
+    val config: Config = ConfigFactory.load("provider.conf").getConfig("Cloud")
+    val paasconfig: Config = config.getConfig("Paas")
+>>>>>>> 5aaae03796d9dac7e251b367fd47d0746d86febe
 
     val vmAllocation = Map("FirstFit"->new VmAllocationPolicyFirstFit(),"RoundRobin"->new VmAllocationPolicyRoundRobin(),"Simple"->new VmAllocationPolicySimple(),"BestFit"->new VmAllocationPolicyBestFit());
 
